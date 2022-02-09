@@ -1,0 +1,46 @@
+{% extends 'meetups/base/base.html' %}
+{% load static %}
+{% block title%} All Meetup {% endblock %}
+
+{% block site_css%}
+<link rel = "stylesheet" href = "{%static 'meetups/styles/all-meetups.css'%}">
+
+{% endblock%}
+
+    
+    
+
+{% block main_heading %}
+<h1>We have great meetups here</h1>
+{% endblock %}
+
+{% block head_content%}
+<h1>Find the one that best suits your needs</h1>
+
+{% endblock %}
+
+
+{% block body %}
+<section>
+    <h1>upcoming meetups</h1>
+    <ol>
+        {% for meetup_items in meetups %}
+            {% include 'meetups/includes/meetups-item.html' %}
+        {% endfor %}
+
+
+    </ol>
+</section>
+{% endblock%}
+    
+    <!--
+    {%if showme%}
+    <h2>{{ record.0.title}}</h2>
+    {% elif meetingtime %}
+        {% for meetup_items in meetups %}
+            <p>{{ meetup_items.title }}</p>
+        {% endfor %}
+    <h2>meeting time is: 2 pm</h2>
+    {%else %}
+    <h2>No Meetups</h2>
+    {%endif%} -->

@@ -1,0 +1,55 @@
+@import url(‘https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Roboto+Slab:wght@700&display=swap’);
+
+•	{
+  Box-sizing: border-box;
+}
+
+Body {
+  Font-family: ‘Roboto’, sans-serif;
+  Margin: 0;
+  Background-color: #ccc3db;
+  Color: #3e3e41;
+}
+
+H1,
+H2,
+H3 {
+  Font-family: ‘Roboto Slab’, sans-serif;
+  Color: #222224;
+}
+
+Button,
+.btn {
+  Cursor: pointer;
+  Font: inherit;
+  Padding: 0.5rem 1.5rem;
+  Background-color: #350490;
+  Border: 1px solid #350490;
+  Color: white;
+  Border-radius: 4px;
+  Text-decoration: none;
+}
+
+Button:hover,
+.btn:hover {
+  Background-color: #230161;
+  Border-color: #230161;
+}
+
+#main-header {
+    Width: 100%;
+    Text-align: center;
+    Padding: 2rem 0;
+}
+
+#main-header h1 {
+    Font-size: 1.5rem;
+}
+
+#main-logo {
+    Font-size: 3rem;
+    Font-family: ‘Roboto Slab’, sans-serif;
+    Text-decoration: none;
+    Color: #350490;
+    Font-weight: bold;
+}

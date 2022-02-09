@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %} Meetup Title {% endblock %}
+    <link rel = "stylesheet" href = "{%static 'meetups/styles/base.css'%}">
+    {% block site_css%}
+    <link rel = "stylesheet" href ="{% static 'meetups/styles/meetup-details.css'%}">
+    {%endblock%}
+    
+</head>
+<body>
+    <header id = 'main-header'> 
+        <nav> <a href = "{% url 'meetups/meetup_details.html' Meetups.slug %}" id ='main-logo' >   Django Meetups</a></nav>
+        {% block main_heading%}{% endblock %}
+        <h1>Find the one that best suits your needs</h1>
+       <p> {% block header_content %}{% endblock %} </p> 
+    </header>
+    <main>
+        {%block body%}{%endblock%}
+
+
+    </main>
+    <!--
+    {%if showme%}
+    <h2>{{ record.0.title}}</h2>
+    {% elif meetingtime %}
+        {% for meetup_items in meetups %}
+            <p>{{ meetup_items.title }}</p>
+        {% endfor %}
+    <h2>meeting time is: 2 pm</h2>
+    {%else %}
+    <h2>No Meetups</h2>
+    {%endif%} -->
+</body>
+</html>
