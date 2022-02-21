@@ -14,7 +14,7 @@
 </head>
 <body>
     <header id = 'main-header'> 
-        <nav> <a href = "{% url 'meetups/meetup_details.html' Meetups.slug %}" id ='main-logo' >   Django Meetups</a></nav>
+        <nav> <a href = "{% url 'meetups/meetup_details.html' Meetups.slug %}" id ='main-logo' >  Django Meetups</a></nav>
         {% block main_heading%}{% endblock %}
         <h1>Find the one that best suits your needs</h1>
        <p> {% block header_content %}{% endblock %} </p> 
